@@ -23,8 +23,8 @@ function App() {
   
   const calculateCubeSurfaceArea = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/calculate-cube-surface-area', 
-        { sideLength: sideLengthCube }, 
+      const response = await axios.post('http://174.129.48.22:8080/function/cube-surface-area', 
+        { side: sideLengthCube }, 
         { headers: { 'Content-Type': 'application/json' } }
       );
       setCubeSurfaceArea(response.data.surfaceArea);
